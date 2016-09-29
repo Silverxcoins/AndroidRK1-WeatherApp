@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="VICE_CITY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vice_city" />
+
+    <Button
+    android:text="RACCOON_CITY"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_raccoon_city" />
+
+    <Button
+        android:text="SPRINGFIELD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_springfield" />
+
+    <Button
+        android:text="SILENT_HILL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_silent_hill" />
+
+    <Button
+android:text="SOUTH_PARK"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/btn_south_park" />
+
+</LinearLayout>
