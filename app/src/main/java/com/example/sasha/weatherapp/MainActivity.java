@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_update_in_bg_on).setOnClickListener(onUpdateInBgOnClick);
         findViewById(R.id.btn_update_in_bg_off).setOnClickListener(onUpdateInBgOffClick);
 
-        loadWeatherOnce();
-
         BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        printWeather();
+        loadWeatherOnce();
     }
 
     private void printWeather() {

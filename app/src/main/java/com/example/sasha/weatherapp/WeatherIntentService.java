@@ -20,11 +20,11 @@ public class WeatherIntentService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
             try {
-                for (City city : City.values()) {
-                    Weather weather = WeatherUtils.getInstance().loadWeather(city);
-                    WeatherStorage.getInstance(getApplicationContext())
-                            .saveWeather(city, weather);
-                }
+                City currentCity = WeatherStorage.getInstance(getApplicationContext())
+                        .getCurrentCity();
+                Weather weather = WeatherUtils.getInstance().loadWeather(currentCity);
+                WeatherStorage.getInstance(getApplicationContext())
+                        .saveWeather(currentCity, weather);
                 Intent resultIntent = new Intent(MainActivity.ACTION_NEW_WEATHER);
                 sendBroadcast(resultIntent);
             } catch (IOException e) {
